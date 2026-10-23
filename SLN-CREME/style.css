@@ -1,0 +1,1664 @@
+/* ========================================================
+   SLN CRÈME — ARTISAN BAKERY & PATISSERIE
+   Official Stylesheet (CSS3) — PURE CSS TANPA JAVASCRIPT
+   
+   Palet Warna Resmi:
+   - Ivory:          #F7F1E7 (Latar Belakang Dasar)
+   - Warm Beige:     #E5D2B8 (Border, Garis & Aksen Halus)
+   - Soft Caramel:   #B18A67 (Aksen Gandum & Sentuhan Emas)
+   - Mocha Brown:    #684633 (Tombol & Elemen Interaktif Utama)
+   - Espresso Brown: #38251D (Teks Utama, Judul & Logo)
+   ======================================================== */
+
+/* --------------------------------------------------------
+   1. CSS VARIABLES (DESIGN TOKENS)
+   -------------------------------------------------------- */
+:root {
+  --color-ivory: #F7F1E7;
+  --color-ivory-light: #FAF6F0;
+  --color-ivory-card: #FFFFFF;
+  --color-warm-beige: #E5D2B8;
+  --color-beige-subtle: #EFE4D6;
+  --color-soft-caramel: #B18A67;
+  --color-mocha: #684633;
+  --color-mocha-hover: #523525;
+  --color-espresso: #38251D;
+  --color-espresso-muted: #5A4034;
+  --color-white: #FFFFFF;
+
+  /* Tipografi */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Bayangan & Radius */
+  --shadow-sm: 0 4px 12px rgba(56, 37, 29, 0.06);
+  --shadow-md: 0 8px 24px rgba(56, 37, 29, 0.10);
+  --shadow-lg: 0 16px 40px rgba(56, 37, 29, 0.16);
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Transisi Halus */
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --------------------------------------------------------
+   2. RESET & ELEMEN DASAR
+   -------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: var(--color-espresso);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* --------------------------------------------------------
+   3. TOMBOL (PILL BUTTONS) — PERSIS SEPERTI GAMBAR REFERENSI
+   -------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-mocha);
+  color: var(--color-ivory);
+  box-shadow: 0 4px 14px rgba(104, 70, 51, 0.22);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-mocha-hover);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(104, 70, 51, 0.35);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-mocha);
+  color: var(--color-mocha);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-mocha);
+  color: var(--color-ivory);
+  transform: translateY(-2px);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* --------------------------------------------------------
+   4. TOP BAR
+   -------------------------------------------------------- */
+.top-bar {
+  background-color: #EFE6D9;
+  border-bottom: 1px solid var(--color-warm-beige);
+  font-size: 0.78rem;
+  color: var(--color-espresso-muted);
+  padding: 8px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar-left, .top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.divider {
+  color: var(--color-warm-beige);
+}
+
+.tagline-mini {
+  font-style: italic;
+  color: var(--color-soft-caramel);
+  font-weight: 500;
+}
+
+.top-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-link:hover {
+  color: var(--color-mocha);
+}
+
+.social-mini {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  color: var(--color-espresso-muted);
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--color-mocha);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------
+   5. NAVBAR / HEADER & CHECKBOX HACK (PURE CSS)
+   -------------------------------------------------------- */
+.site-header {
+  background-color: var(--color-ivory);
+  border-bottom: 1px solid rgba(229, 210, 184, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Logo SLN CRÈME */
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+}
+
+.logo-sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.26em;
+  color: var(--color-soft-caramel);
+  font-weight: 600;
+  margin-bottom: 1px;
+}
+
+.logo-main {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-espresso);
+}
+
+.logo-est {
+  font-size: 0.56rem;
+  letter-spacing: 0.22em;
+  color: var(--color-soft-caramel);
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* Nav Menu Desktop */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-link {
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-espresso);
+  position: relative;
+  padding: 6px 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-mocha);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--color-mocha);
+}
+
+/* Nav Actions & Tombol Order */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-order {
+  padding: 10px 24px;
+  font-size: 0.78rem;
+}
+
+/* Checkbox Tersembunyi untuk Hamburger Menu Pure CSS */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+/* Label Hamburger Button */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hamburger-btn .bar {
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--color-espresso);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Animasi Hamburger ke 'X' saat Checkbox Tercentang (Pure CSS) */
+.nav-toggle:checked ~ .nav-actions .hamburger-btn .bar:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.nav-toggle:checked ~ .nav-actions .hamburger-btn .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .nav-actions .hamburger-btn .bar:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Mobile Drawer (Tampil saat Checkbox Tercentang) */
+.mobile-drawer {
+  display: none;
+  width: 100%;
+  background-color: var(--color-ivory);
+  border-top: 1px solid var(--color-warm-beige);
+  padding: 24px 0 10px 0;
+  margin-top: 12px;
+}
+
+.nav-toggle:checked ~ .mobile-drawer {
+  display: block;
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.mobile-nav-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+  display: block;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(229, 210, 184, 0.7);
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-mocha);
+  padding-left: 6px;
+}
+
+.mobile-drawer-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-contact-info {
+  font-size: 0.85rem;
+  color: var(--color-espresso-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* --------------------------------------------------------
+   6. HERO SECTION — KOMPOSISI PERSIS SEPERTI GAMBAR REFERENSI
+   -------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0;
+  overflow: hidden;
+  background-color: #EBDDCB;
+}
+
+.hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: contrast(1.03) brightness(0.96);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(247, 241, 231, 0.28) 0%, rgba(56, 37, 29, 0.22) 100%);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Kartu Tengah Hero: Kartu Ivory Bersih dengan Frame Tipis */
+.hero-card {
+  background-color: rgba(253, 250, 246, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(229, 210, 184, 0.9);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 42px rgba(56, 37, 29, 0.16);
+  max-width: 530px;
+  width: 100%;
+  padding: 40px 42px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.hero-card:hover {
+  box-shadow: 0 20px 48px rgba(56, 37, 29, 0.20);
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  font-weight: 600;
+  color: var(--color-soft-caramel);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.hero-brand {
+  font-family: var(--font-serif);
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-espresso);
+  margin-bottom: 4px;
+  line-height: 1.15;
+}
+
+.hero-tagline {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-mocha);
+  margin-bottom: 14px;
+}
+
+.hero-divider {
+  width: 44px;
+  height: 2px;
+  background-color: var(--color-soft-caramel);
+  margin: 0 auto 16px auto;
+  border-radius: 2px;
+}
+
+.hero-desc {
+  font-size: 0.93rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.62;
+  margin-bottom: 26px;
+}
+
+.btn-hero {
+  padding: 13px 38px;
+  font-size: 0.82rem;
+}
+
+/* --------------------------------------------------------
+   7. SECTION HEADERS & HIASAN GANDUM (WHEAT ICON)
+   -------------------------------------------------------- */
+.section {
+  padding: 85px 0;
+}
+
+.section-header {
+  margin-bottom: 50px;
+}
+
+.header-flourish {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.wheat-icon {
+  width: 42px;
+  height: 28px;
+  opacity: 0.9;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+  margin-bottom: 12px;
+  line-height: 1.22;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: var(--color-espresso-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------
+   8. SECTION: MENGAPA MEMILIH KAMI? (3 KARTU PRODUK DENGAN INSET FRAME)
+   -------------------------------------------------------- */
+.section-why {
+  background-color: var(--color-ivory);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Kartu Produk Berbingkai Elegan Sesuai Referensi */
+.product-card {
+  background-color: var(--color-ivory-light);
+  border: 1px solid var(--color-warm-beige);
+  border-radius: var(--radius-md);
+  padding: 16px 16px 26px 16px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-soft-caramel);
+}
+
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-warm-beige);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.product-card:hover .card-img {
+  transform: scale(1.05);
+}
+
+.card-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(56, 37, 29, 0.75);
+  backdrop-filter: blur(4px);
+  color: var(--color-ivory);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.card-body {
+  padding: 20px 8px 0 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.58;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.btn-card {
+  align-self: center;
+  padding: 10px 28px;
+  font-size: 0.76rem;
+}
+
+/* --------------------------------------------------------
+   9. SECTION: KUNJUNGI KAMI HARI INI (DUA KOLOM + KOLASE 4 FOTO)
+   -------------------------------------------------------- */
+.section-visit {
+  background-color: #F1E9DE;
+  border-top: 1px solid var(--color-warm-beige);
+  border-bottom: 1px solid var(--color-warm-beige);
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.visit-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  font-weight: 600;
+  color: var(--color-soft-caramel);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.visit-title {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+  margin-bottom: 14px;
+  line-height: 1.22;
+}
+
+.visit-desc {
+  font-size: 0.95rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.62;
+  margin-bottom: 26px;
+}
+
+/* Store Info Box */
+.store-info-box {
+  background-color: var(--color-ivory-light);
+  border: 1px solid var(--color-warm-beige);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 26px;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.info-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-beige-subtle);
+  color: var(--color-mocha);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-espresso);
+  margin-bottom: 2px;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.45;
+}
+
+.info-hint {
+  font-size: 0.72rem;
+  color: var(--color-soft-caramel);
+  font-style: italic;
+  display: block;
+  margin-top: 2px;
+}
+
+.phone-link {
+  color: var(--color-mocha);
+  font-weight: 600;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+}
+
+.btn-visit {
+  padding: 12px 32px;
+}
+
+/* Collage Grid 4 Foto Sesuai Referensi */
+.visit-collage {
+  width: 100%;
+}
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 175px;
+  gap: 14px;
+}
+
+.collage-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-warm-beige);
+  display: block;
+}
+
+.collage-item-3 {
+  grid-row: span 2; /* Foto pie / rustic tart menjulang tinggi */
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.collage-item:hover .collage-img {
+  transform: scale(1.06);
+}
+
+.collage-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(56, 37, 29, 0.7) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  opacity: 0.92;
+  transition: var(--transition);
+}
+
+.collage-badge {
+  color: var(--color-ivory);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  background-color: rgba(104, 70, 51, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 4px 11px;
+  border-radius: var(--radius-pill);
+}
+
+/* --------------------------------------------------------
+   10. SECTION: KREASI KAMI (GALERI PRODUK BERVARIASI)
+   -------------------------------------------------------- */
+.section-gallery {
+  background-color: var(--color-ivory);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 36px;
+}
+
+.gallery-card {
+  background-color: var(--color-ivory-light);
+  border: 1px solid var(--color-warm-beige);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-soft-caramel);
+}
+
+.gallery-card .gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+.gallery-info {
+  padding: 18px 20px;
+  position: relative;
+}
+
+.item-cat {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-soft-caramel);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.item-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+  margin-bottom: 6px;
+}
+
+.item-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-mocha);
+}
+
+.btn-preview {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-beige-subtle);
+  color: var(--color-espresso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.btn-preview:hover {
+  background-color: var(--color-mocha);
+  color: var(--color-ivory);
+}
+
+/* Call to Action Galeri */
+.gallery-cta {
+  margin-top: 48px;
+  padding: 30px;
+  background-color: var(--color-beige-subtle);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--color-soft-caramel);
+}
+
+.gallery-cta-text {
+  font-size: 0.95rem;
+  color: var(--color-espresso);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* --------------------------------------------------------
+   11. BANNER HIGHLIGHT / QUOTE
+   -------------------------------------------------------- */
+.section-quote {
+  background: linear-gradient(rgba(56, 37, 29, 0.86), rgba(56, 37, 29, 0.90)), url('assets/images/hero-croissants.jpg') center/cover fixed;
+  color: var(--color-ivory);
+  padding: 70px 0;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-style: italic;
+  max-width: 820px;
+  margin: 0 auto 16px auto;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-warm-beige);
+  display: block;
+}
+
+/* --------------------------------------------------------
+   12. FOOTER & KONTAK (WARM BEIGE & MOCHA ACCENTS)
+   -------------------------------------------------------- */
+.site-footer {
+  background-color: #ECE1D2;
+  border-top: 1px solid var(--color-warm-beige);
+  color: var(--color-espresso);
+  padding-top: 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1.2fr 1fr;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+/* Kolom Brand */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.footer-logo .logo-main {
+  font-size: 1.8rem;
+}
+
+.footer-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-mocha);
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  font-size: 0.85rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-warm-beige);
+  color: var(--color-espresso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.social-circle:hover {
+  background-color: var(--color-mocha);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Kolom Navigasi */
+.footer-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-soft-caramel);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--color-espresso-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a i {
+  font-size: 0.7rem;
+  color: var(--color-soft-caramel);
+}
+
+.footer-links a:hover {
+  color: var(--color-mocha);
+  transform: translateX(3px);
+}
+
+/* Kolom Kontak */
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.85rem;
+}
+
+.contact-list li i {
+  color: var(--color-mocha);
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-soft-caramel);
+  font-weight: 600;
+}
+
+.contact-link {
+  color: var(--color-espresso);
+  font-weight: 600;
+}
+
+.contact-link:hover {
+  color: var(--color-mocha);
+  text-decoration: underline;
+}
+
+.contact-hint {
+  font-size: 0.72rem;
+  color: var(--color-soft-caramel);
+  font-style: italic;
+  display: block;
+}
+
+/* Kolom Jam Operasional */
+.hours-card {
+  background-color: var(--color-ivory);
+  border: 1px solid var(--color-warm-beige);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  border-bottom: 1px dashed rgba(229, 210, 184, 0.8);
+  padding-bottom: 6px;
+}
+
+.hours-row .day {
+  font-weight: 600;
+  color: var(--color-espresso);
+}
+
+.hours-row .time {
+  color: var(--color-espresso-muted);
+}
+
+.fresh-batch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--color-mocha);
+  margin-top: 4px;
+}
+
+/* Copyright Bottom */
+.footer-bottom {
+  border-top: 1px solid var(--color-warm-beige);
+  padding: 20px 0;
+  background-color: #E2D6C6;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-espresso-muted);
+}
+
+/* --------------------------------------------------------
+   13. MODALS PURE CSS (:target PSEUDO-CLASS)
+   -------------------------------------------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Aktifkan Modal saat ID-nya menjadi :target URL hash */
+.modal:target {
+  display: flex;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(56, 37, 29, 0.68);
+  backdrop-filter: blur(4px);
+  cursor: default;
+}
+
+.modal-dialog {
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-ivory-light);
+  border: 1px solid var(--color-warm-beige);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  max-width: 520px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: scaleUp 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.modal-dialog-lg {
+  max-width: 680px;
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content {
+  padding: 28px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-warm-beige);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-sub {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: var(--color-soft-caramel);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-espresso);
+}
+
+.modal-close {
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--color-espresso-muted);
+  padding: 4px 8px;
+}
+
+.modal-close:hover {
+  color: var(--color-mocha);
+}
+
+/* Form Pemesanan */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-espresso);
+}
+
+.form-control {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-warm-beige);
+  background-color: var(--color-white);
+  color: var(--color-espresso);
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--color-mocha);
+  box-shadow: 0 0 0 3px rgba(104, 70, 51, 0.12);
+}
+
+.order-direct-hint {
+  font-size: 0.8rem;
+  color: var(--color-espresso-muted);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.link-highlight {
+  color: var(--color-mocha);
+  font-weight: 700;
+}
+
+/* Modal Cerita (Story) */
+.story-body {
+  font-size: 0.92rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.65;
+}
+
+.story-feature-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+}
+
+.story-highlight-box {
+  background-color: var(--color-beige-subtle);
+  border-left: 3px solid var(--color-mocha);
+  padding: 14px 16px;
+  margin: 16px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.story-highlight-box h5 {
+  font-size: 0.85rem;
+  color: var(--color-mocha);
+  margin-bottom: 4px;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid var(--color-warm-beige);
+  padding-top: 16px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+/* Modal Visit Store */
+.visit-modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.visit-modal-img {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.modal-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visit-modal-details h4 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-espresso);
+  margin-bottom: 10px;
+}
+
+.visit-modal-details p {
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+  color: var(--color-espresso-muted);
+}
+
+.visit-modal-details p i {
+  color: var(--color-mocha);
+  width: 20px;
+}
+
+.map-placeholder {
+  background-color: var(--color-beige-subtle);
+  border: 1px dashed var(--color-soft-caramel);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--color-espresso);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-placeholder i {
+  font-size: 1.2rem;
+  color: var(--color-mocha);
+}
+
+/* Lightbox Modal (Pure CSS :target) */
+.modal-lightbox .modal-dialog-img {
+  max-width: 680px;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--color-ivory-light);
+}
+
+.modal-close-img {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(56, 37, 29, 0.7);
+  color: var(--color-ivory);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  z-index: 20;
+}
+
+.modal-close-img:hover {
+  background-color: var(--color-mocha);
+}
+
+.lightbox-img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.lightbox-meta {
+  padding: 20px 24px;
+}
+
+.lightbox-meta h4 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-espresso);
+  margin-bottom: 6px;
+}
+
+.lightbox-meta p {
+  font-size: 0.9rem;
+  color: var(--color-espresso-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------
+   14. FLOATING ELEMENTS (WHATSAPP & BACK TO TOP)
+   -------------------------------------------------------- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+  z-index: 90;
+  transition: var(--transition);
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
+}
+
+.floating-tooltip {
+  position: absolute;
+  right: 64px;
+  background-color: var(--color-espresso);
+  color: var(--color-ivory);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: var(--transition);
+}
+
+.floating-whatsapp:hover .floating-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 88px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-mocha);
+  color: var(--color-ivory);
+  font-size: 1rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 89;
+  transition: var(--transition);
+}
+
+.back-to-top:hover {
+  background-color: var(--color-mocha-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --------------------------------------------------------
+   15. RESPONSIVE DESIGN (MEDIA QUERIES)
+   -------------------------------------------------------- */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .top-bar-left .tagline-mini,
+  .top-bar-left .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: 500px;
+    padding: 50px 0;
+  }
+
+  .hero-card {
+    padding: 30px 22px;
+    margin: 0 16px;
+  }
+
+  .hero-brand {
+    font-size: 2.2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.15rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .collage-grid {
+    grid-auto-rows: 150px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 30px auto 0 auto;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-brand {
+    font-size: 1.9rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .visit-title {
+    font-size: 1.85rem;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 0.78rem;
+  }
+
+  .collage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collage-item-3 {
+    grid-row: span 1;
+  }
+}

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLN CRÈME — Artisan Bakery & Patisserie | Freshly Baked, Just for You!</title>
+  
+  <!-- Meta Identitas Brand & SEO -->
+  <meta name="description" content="SLN CRÈME menyajikan aneka pastry buatan tangan, croissant keemasan, roti artisan, cookies, dan custom cake premium yang dibuat segar setiap hari dengan bahan terbaik.">
+  <meta name="keywords" content="SLN CRÈME, Bakery, Patisserie, Croissant, Roti Artisan, Pastry Manis, Custom Cake, Cookies">
+  <meta name="author" content="SLN CRÈME">
+
+  <!-- Google Fonts: Playfair Display (Serif Elegan) & Plus Jakarta Sans (Sans-Serif Bersih) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 (Ikon Vektor) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet Utama (Pure CSS3 tanpa JavaScript) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!--  TOP BAR: Jam Operasional, Tagline & Kontak Cepat -->
+  <aside class="top-bar" aria-label="Informasi Jam Buka dan Kontak">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span><i class="fa-regular fa-clock"></i> Buka Setiap Hari: 07.00 — 21.00 WIB</span>
+        <span class="divider">|</span>
+        <span class="tagline-mini">Freshly Baked, Just for You!</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+6285179948010" class="top-link" aria-label="Telepon Toko SLN CRÈME">
+          <i class="fa-solid fa-phone"></i> +62 851-7994-8010
+        </a>
+        <span class="divider">|</span>
+        <a href="mailto:selinaangraini9@gmail.com" class="top-link" aria-label="Email Toko SLN CRÈME">
+          <i class="fa-solid fa-envelope"></i> selinaangraini9@gmail.com
+        </a>
+        <span class="divider">|</span>
+        <div class="social-mini">
+          <a href="#" aria-label="Instagram SLN CRÈME" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok SLN CRÈME" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/6285179948010" target="_blank" rel="noopener" aria-label="WhatsApp SLN CRÈME" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR (HEADER): Logo SLN CRÈME, Navigasi, & Hamburger Pure CSS -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      
+      <!-- Logo Brand SLN CRÈME Sesuai Mockup Referensi -->
+      <a href="#top" class="brand-logo" aria-label="SLN CRÈME Beranda">
+        <span class="logo-sub">ARTISAN PATISSERIE</span>
+        <span class="logo-main">SLN CRÈME</span>
+        <span class="logo-est">EST. 2026</span>
+      </a>
+
+      <!-- Menu Navigasi Desktop -->
+      <nav class="nav-menu" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#beranda" class="nav-link">Beranda</a></li>
+          <li class="nav-item"><a href="#mengapa-kami" class="nav-link">Menu</a></li>
+          <li class="nav-item"><a href="#kunjungi-kami" class="nav-link">Tentang Kami</a></li>
+          <li class="nav-item"><a href="#kreasi-kami" class="nav-link">Jurnal</a></li>
+          <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Checkbox Hack untuk Hamburger Menu Responsif (Pure CSS3) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Buka navigasi mobile">
+
+      <!-- Tombol Aksi Kanan & Hamburger Menu -->
+      <div class="nav-actions">
+        <a href="#order-modal" class="btn btn-primary btn-order">
+          <span>ORDER SEKARANG</span>
+        </a>
+
+        <!-- Label Hamburger Menu (Mengontrol Checkbox Pure CSS) -->
+        <label for="nav-toggle" class="hamburger-btn" aria-label="Menu Navigasi Mobile">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+      </div>
+
+      <!-- Mobile Drawer Navigation (Tampil saat Checkbox Tercentang) -->
+      <nav class="mobile-drawer" aria-label="Navigasi Mobile">
+        <ul class="mobile-nav-list">
+          <li><a href="#beranda" class="mobile-nav-link">Beranda</a></li>
+          <li><a href="#mengapa-kami" class="mobile-nav-link">Menu Unggulan</a></li>
+          <li><a href="#kunjungi-kami" class="mobile-nav-link">Tentang &amp; Lokasi</a></li>
+          <li><a href="#kreasi-kami" class="mobile-nav-link">Jurnal Kreasi</a></li>
+          <li><a href="#kontak" class="mobile-nav-link">Kontak Toko</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+          <a href="#order-modal" class="btn btn-primary btn-full">ORDER SEKARANG</a>
+          <div class="mobile-contact-info">
+            <p><i class="fa-solid fa-phone"></i> +62 851-7994-8010</p>
+            <p><i class="fa-solid fa-envelope"></i> selinaangraini9@gmail.com</p>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: Komposisi Flatlay Pastry & Kartu Utama SLN CRÈME -->
+    <section class="hero-section" id="beranda">
+      <div class="hero-bg-wrapper">
+        <img src="assets/images/hero-croissants.jpg" alt="SLN CRÈME Bakery & Pastry Flatlay" class="hero-bg-img">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Kartu Teks Pusat Sesuai Komposisi Referensi -->
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <span class="hero-label">ARTISAN BAKERY &amp; PATISSERIE</span>
+            <h1 class="hero-brand">SLN CRÈME</h1>
+            <p class="hero-tagline">"Freshly Baked, Just for You!"</p>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">
+              Temukan aneka pastry buatan tangan, croissant keemasan, roti artisan, dan camilan lezat yang dibuat dengan penuh cinta.
+            </p>
+            <div class="hero-cta">
+              <a href="#order-modal" class="btn btn-primary btn-hero">
+                ORDER SEKARANG
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Mengapa Memilih Kami? (3 Kartu Produk)-->
+    <section class="section section-why" id="mengapa-kami">
+      <div class="container">
+        
+        <!-- Header Section dengan Ikon Gandum Sesuai Referensi -->
+        <div class="section-header text-center">
+          <div class="header-flourish">
+            <img src="assets/images/wheat-icon.svg" alt="Ikon Gandum" class="wheat-icon">
+          </div>
+          <h2 class="section-title">Mengapa Memilih Kami?</h2>
+          <p class="section-subtitle">
+            Setiap racikan bahan di SLN CRÈME dipilih secara teliti untuk menghasilkan tekstur sempurna, aroma hangat, dan rasa yang tak terlupakan.
+          </p>
+        </div>
+
+        <!-- 3 Kartu Produk Horizontal -->
+        <div class="cards-grid">
+          
+          <!-- Kartu 1: Roti Artisan -->
+          <article class="product-card">
+            <div class="card-img-wrapper">
+              <img src="assets/images/artisan-bread.jpg" alt="Roti Artisan SLN CRÈME" class="card-img" loading="lazy">
+              <span class="card-tag">Artisan Bread</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Roti Artisan</h3>
+              <p class="card-desc">
+                Dibuat dari bahan pilihan dengan proses fermentasi alami untuk rasa yang lebih kaya dan sehat.
+              </p>
+              <a href="#story-bread" class="btn btn-primary btn-card">
+                LIHAT CERITA
+              </a>
+            </div>
+          </article>
+
+          <!-- Kartu 2: Pastry Manis -->
+          <article class="product-card">
+            <div class="card-img-wrapper">
+              <img src="assets/images/sweet-pastry.jpg" alt="Pastry Manis SLN CRÈME" class="card-img" loading="lazy">
+              <span class="card-tag">Sweet Pastry</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Pastry Manis</h3>
+              <p class="card-desc">
+                Kelezatan pastry klasik dan modern dengan tekstur yang renyah dan lembut di dalam.
+              </p>
+              <a href="#story-pastry" class="btn btn-primary btn-card">
+                LIHAT CERITA
+              </a>
+            </div>
+          </article>
+
+          <!-- Kartu 3: Kue Custom -->
+          <article class="product-card">
+            <div class="card-img-wrapper">
+              <img src="assets/images/custom-cake.jpg" alt="Kue Custom SLN CRÈME" class="card-img" loading="lazy">
+              <span class="card-tag">Custom Cakes</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Kue Custom</h3>
+              <p class="card-desc">
+                Kue spesial untuk momen berharga Anda, dibuat dengan desain yang cantik dan rasa yang istimewa.
+              </p>
+              <a href="#story-cake" class="btn btn-primary btn-card">
+                LIHAT CERITA
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Kunjungi Kami Hari Ini (Dua Kolom: Teks & Kolase 4 Foto) -->
+    <section class="section section-visit" id="kunjungi-kami">
+      <div class="container">
+        <div class="visit-grid">
+          
+          <!-- Kolom Kiri: Informasi Kunjungan & Toko -->
+          <div class="visit-content">
+            <span class="visit-label">PENGALAMAN AUTENTIK</span>
+            <h2 class="visit-title">Kunjungi Kami Hari Ini</h2>
+            <p class="visit-desc">
+              Rasakan pengalaman menikmati pastry terspesial di SLN CRÈME, tempat di mana setiap rasa diciptakan dengan penuh cinta.
+            </p>
+
+            <!-- Detail Alamat & Jam Operasional (Placeholder yang Mudah Diedit) -->
+            <div class="store-info-box">
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h4 class="info-heading">Alamat Butik Bakery</h4>
+                  <!-- Placeholder Alamat Toko: Mudah diedit -->
+                  <p class="info-text">Jl. Senopati No. 88, Kebayoran Baru, Jakarta Selatan 12190</p>
+                  <small class="info-hint">(Placeholder — Alamat resmi dapat disesuaikan)</small>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div>
+                  <h4 class="info-heading">Jam Operasional</h4>
+                  <p class="info-text">Senin — Jumat: 07.00 — 21.00 WIB</p>
+                  <p class="info-text">Sabtu — Minggu: 07.00 — 22.00 WIB</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <h4 class="info-heading">Reservasi &amp; Pemesanan</h4>
+                  <p class="info-text">
+                    <a href="tel:+6285179948010" class="phone-link">+62 851-7994-8010</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tombol Kunjungi Toko Kami (Membuka Modal Detail Lokasi Pure CSS) -->
+            <div class="visit-cta">
+              <a href="#visit-modal" class="btn btn-primary btn-visit">
+                KUNJUNGI TOKO KAMI
+              </a>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Kolase 4 Foto (Cookies, Croissant, Cake, Interior Bakery) -->
+          <div class="visit-collage">
+            <div class="collage-grid">
+              
+              <!-- Foto 1: Cookies & Ring Donut -->
+              <a href="#preview-donuts" class="collage-item collage-item-1" aria-label="Lihat Cookies Artisan">
+                <img src="assets/images/collage-donuts.jpg" alt="Artisan Cookies dan Donut SLN CRÈME" class="collage-img" loading="lazy">
+                <div class="collage-overlay">
+                  <span class="collage-badge">Artisan Cookies</span>
+                </div>
+              </a>
+
+              <!-- Foto 2: Pastry Tartlet Berries -->
+              <a href="#preview-tarts" class="collage-item collage-item-2" aria-label="Lihat Berry Tartlet">
+                <img src="assets/images/collage-tarts.jpg" alt="Pastry Tartlet Berry Manis" class="collage-img" loading="lazy">
+                <div class="collage-overlay">
+                  <span class="collage-badge">Berry Tartlet</span>
+                </div>
+              </a>
+
+              <!-- Foto 3: Rustic Sugar Powdered Pie / Cake (Menjulang Tinggi) -->
+              <a href="#preview-pie" class="collage-item collage-item-3" aria-label="Lihat Rustic Pie">
+                <img src="assets/images/collage-pie.jpg" alt="Classic Sugar Pie SLN CRÈME" class="collage-img" loading="lazy">
+                <div class="collage-overlay">
+                  <span class="collage-badge">Rustic Tart &amp; Pie</span>
+                </div>
+              </a>
+
+              <!-- Foto 4: Interior Warm Bakery Boutique -->
+              <a href="#preview-interior" class="collage-item collage-item-4" aria-label="Lihat Suasana Butik">
+                <img src="assets/images/collage-interior.jpg" alt="Suasana Hangat Butik SLN CRÈME" class="collage-img" loading="lazy">
+                <div class="collage-overlay">
+                  <span class="collage-badge">Suasana Butik</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Kreasi Kami (Galeri Produk Bervariasi) -->
+    <section class="section section-gallery" id="kreasi-kami">
+      <div class="container">
+        
+        <!-- Header Galeri -->
+        <div class="section-header text-center">
+          <div class="header-flourish">
+            <img src="assets/images/wheat-icon.svg" alt="Ikon Gandum" class="wheat-icon">
+          </div>
+          <h2 class="section-title">Kreasi Kami</h2>
+          <p class="section-subtitle">
+            Jelajahi aneka mahakarya pastry dan kue andalan kami, dipanggang segar dengan dedikasi tinggi setiap hari.
+          </p>
+        </div>
+
+        <!-- Grid Produk Bervariasi Sesuai Gambar Referensi -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <!-- Item 1: Croissant -->
+          <article class="gallery-item">
+            <div class="gallery-card">
+              <img src="assets/images/gallery-croissant.jpg" alt="Golden Butter Croissant" class="gallery-img" loading="lazy">
+              <div class="gallery-info">
+                <span class="item-cat">Croissant</span>
+                <h4 class="item-name">Golden Butter Croissant</h4>
+                <p class="item-price">Rp 28.000</p>
+                <a href="#preview-croissant" class="btn-preview" aria-label="Lihat Detail Croissant"><i class="fa-solid fa-expand"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Roti Artisan -->
+          <article class="gallery-item">
+            <div class="gallery-card">
+              <img src="assets/images/gallery-sourdough.jpg" alt="Rustic Country Sourdough" class="gallery-img" loading="lazy">
+              <div class="gallery-info">
+                <span class="item-cat">Roti Artisan</span>
+                <h4 class="item-name">Country Sourdough</h4>
+                <p class="item-price">Rp 45.000</p>
+                <a href="#preview-sourdough" class="btn-preview" aria-label="Lihat Detail Sourdough"><i class="fa-solid fa-expand"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Cookies -->
+          <article class="gallery-item">
+            <div class="gallery-card">
+              <img src="assets/images/gallery-cookies.jpg" alt="Valrhona Sea Salt Cookies" class="gallery-img" loading="lazy">
+              <div class="gallery-info">
+                <span class="item-cat">Cookies</span>
+                <h4 class="item-name">Sea Salt Dark Choco</h4>
+                <p class="item-price">Rp 24.000</p>
+                <a href="#preview-cookies" class="btn-preview" aria-label="Lihat Detail Cookies"><i class="fa-solid fa-expand"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Pastry Spesial -->
+          <article class="gallery-item">
+            <div class="gallery-card">
+              <img src="assets/images/gallery-pastry.jpg" alt="Cinnamon Danish Swirl" class="gallery-img" loading="lazy">
+              <div class="gallery-info">
+                <span class="item-cat">Pastry Spesial</span>
+                <h4 class="item-name">Cinnamon Danish</h4>
+                <p class="item-price">Rp 32.000</p>
+                <a href="#preview-pastry" class="btn-preview" aria-label="Lihat Detail Pastry"><i class="fa-solid fa-expand"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Aneka Kue -->
+          <article class="gallery-item">
+            <div class="gallery-card">
+              <img src="assets/images/gallery-choux.jpg" alt="French Vanilla Choux" class="gallery-img" loading="lazy">
+              <div class="gallery-info">
+                <span class="item-cat">Aneka Kue</span>
+                <h4 class="item-name">Vanilla Choux Craquelin</h4>
+                <p class="item-price">Rp 26.000</p>
+                <a href="#preview-choux" class="btn-preview" aria-label="Lihat Detail Choux"><i class="fa-solid fa-expand"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Kue Custom -->
+          <article class="gallery-item">
+            <div class="gallery-card">
+              <img src="assets/images/gallery-cake.jpg" alt="Raspberry Velvet Custom Cake" class="gallery-img" loading="lazy">
+              <div class="gallery-info">
+                <span class="item-cat">Kue Custom</span>
+                <h4 class="item-name">Raspberry Velvet Cake</h4>
+                <p class="item-price">Rp 350.000</p>
+                <a href="#preview-cake" class="btn-preview" aria-label="Lihat Detail Custom Cake"><i class="fa-solid fa-expand"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Tombol Aksi Tambahan -->
+        <div class="gallery-cta text-center">
+          <p class="gallery-cta-text">Ingin memesan kue dengan desain khusus atau pesanan katering dalam jumlah besar?</p>
+          <a href="#order-modal" class="btn btn-outline">KONSULTASI KUE CUSTOM</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNER HIGHLIGHT: Filosofi Pemanggangan SLN CRÈME -->
+    <section class="section-quote">
+      <div class="container text-center">
+        <blockquote class="quote-text">
+          "Bagi kami, memanggang roti dan pastry adalah seni menyatukan kesabaran, bahan-bahan alami terbaik, dan rasa cinta untuk menghadirkan kebahagiaan di meja Anda."
+        </blockquote>
+        <cite class="quote-author">— Head Baker &amp; Pastry Chef, SLN CRÈME</cite>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER & KONTAK: Logo, Navigasi, Kontak, Jam Buka & Sosmed -->
+  <footer class="site-footer" id="kontak">
+    <div class="container footer-container">
+      
+      <!-- Kolom 1: Profil Brand SLN CRÈME -->
+      <div class="footer-col col-brand">
+        <a href="#top" class="footer-logo">
+          <span class="logo-sub">ARTISAN PATISSERIE</span>
+          <span class="logo-main">SLN CRÈME</span>
+        </a>
+        <p class="footer-tagline">"Freshly Baked, Just for You!"</p>
+        <p class="footer-desc">
+          Butik bakery &amp; patisserie yang berfokus pada cita rasa autentik, bahan premium, dan teknik pembuatan artisan tradisional untuk pengalaman kuliner terbaik.
+        </p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram SLN CRÈME" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok SLN CRÈME" class="social-circle"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/6285179948010" target="_blank" rel="noopener" aria-label="WhatsApp SLN CRÈME" class="social-circle"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook SLN CRÈME" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <!-- Kolom 2: Navigasi Website -->
+      <div class="footer-col col-nav">
+        <h4 class="footer-title">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="#beranda"><i class="fa-solid fa-angle-right"></i> Beranda</a></li>
+          <li><a href="#mengapa-kami"><i class="fa-solid fa-angle-right"></i> Menu Unggulan</a></li>
+          <li><a href="#kunjungi-kami"><i class="fa-solid fa-angle-right"></i> Tentang Kami</a></li>
+          <li><a href="#kreasi-kami"><i class="fa-solid fa-angle-right"></i> Jurnal &amp; Kreasi</a></li>
+          <li><a href="#kontak"><i class="fa-solid fa-angle-right"></i> Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Informasi Kontak (Sesuai Ketentuan User) -->
+      <div class="footer-col col-contact">
+        <h4 class="footer-title">Hubungi Kami</h4>
+        <ul class="contact-list">
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="contact-label">Nomor Telepon:</span>
+              <a href="tel:+6285179948010" class="contact-link">+62 851-7994-8010</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="contact-label">Email Resmi:</span>
+              <a href="mailto:selinaangraini9@gmail.com" class="contact-link">selinaangraini9@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="contact-label">Lokasi Butik:</span>
+              <span class="contact-text">Jl. Senopati No. 88, Kebayoran Baru, Jakarta Selatan</span>
+              <small class="contact-hint">(Placeholder — Alamat resmi dapat disesuaikan)</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Kolom 4: Jam Operasional -->
+      <div class="footer-col col-hours">
+        <h4 class="footer-title">Jam Operasional</h4>
+        <div class="hours-card">
+          <div class="hours-row">
+            <span class="day">Senin — Jumat:</span>
+            <span class="time">07.00 — 21.00 WIB</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Sabtu — Minggu:</span>
+            <span class="time">07.00 — 22.00 WIB</span>
+          </div>
+          <div class="fresh-batch">
+            <i class="fa-solid fa-fire-burner"></i>
+            <span>Waktu Panggang Pertama: <strong>06.30 WIB</strong></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p class="copyright-text">&copy; 2026 SLN CRÈME. Seluruh Hak Cipta Dilindungi.</p>
+        <p class="credit-text">Freshly Baked, Just for You! — Artisan Bakery &amp; Patisserie</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: ORDER SEKARANG (Pure CSS :target) -->
+  <div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Jendela Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-sub">PESANAN SEGAR HARI INI</span>
+            <h3 class="modal-title" id="orderModalTitle">Order di SLN CRÈME</h3>
+          </div>
+          <a href="#close" class="modal-close" aria-label="Tutup Jendela">&times;</a>
+        </div>
+        
+        <!-- Form Pemesanan Terintegrasi ke WhatsApp Resmi -->
+        <form action="https://wa.me/6285179948010" method="get" target="_blank" class="order-form">
+          <div class="form-group">
+            <label for="customerName">Nama Pemesan</label>
+            <input type="text" id="customerName" name="nama" class="form-control" placeholder="Contoh: Selina Anggraini" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customerPhone">Nomor WhatsApp / HP</label>
+              <input type="tel" id="customerPhone" name="phone" class="form-control" placeholder="0851-xxxx-xxxx" required>
+            </div>
+            <div class="form-group">
+              <label for="deliveryDate">Tanggal Ambil / Kirim</label>
+              <input type="date" id="deliveryDate" name="tanggal" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="productCategory">Pilihan Kategori Menu</label>
+            <select id="productCategory" name="menu" class="form-control">
+              <option value="Golden Butter Croissant">Golden Butter Croissant</option>
+              <option value="Roti Artisan Sourdough">Roti Artisan (Sourdough)</option>
+              <option value="Pastry Manis Cinnamon Danish">Pastry Manis (Cinnamon Danish)</option>
+              <option value="Sea Salt Choco Cookies">Sea Salt Choco Cookies</option>
+              <option value="Vanilla Choux Craquelin">Vanilla Choux Craquelin</option>
+              <option value="Raspberry Velvet Custom Cake">Kue Custom Spesial</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="orderNotes">Catatan Khusus (Jumlah / Tulisan Kue)</label>
+            <textarea id="orderNotes" name="catatan" class="form-control" rows="3" placeholder="Tuliskan jumlah pesanan, request tulisan pada kue, atau alergi..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <!-- Tautan Langsung ke WhatsApp Chat Resmi -->
+            <a href="https://wa.me/6285179948010?text=Halo%20SLN%20CR%C3%88ME,%20saya%20ingin%20memesan%20pastry%20dan%20roti%20segar!" target="_blank" rel="noopener" class="btn btn-primary btn-full">
+              <i class="fa-brands fa-whatsapp"></i> KIRIM PESANAN KE WHATSAPP
+            </a>
+            <p class="order-direct-hint">
+              Atau hubungi kami via telepon: 
+              <a href="tel:+6285179948010" class="link-highlight">+62 851-7994-8010</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CERITA ROTI ARTISAN (Pure CSS :target) -->
+  <div class="modal" id="story-bread" role="dialog" aria-modal="true">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Cerita"></a>
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-sub">WARISAN TRADISI ROTI EROPA KLASIK</span>
+            <h3 class="modal-title">Roti Artisan — Sourdough &amp; Fermentasi Alami</h3>
+          </div>
+          <a href="#close" class="modal-close" aria-label="Tutup">&times;</a>
+        </div>
+        
+        <div class="story-body">
+          <img src="assets/images/artisan-bread.jpg" alt="Roti Artisan SLN CRÈME" class="story-feature-img">
+          <p>Setiap roti artisan di <strong>SLN CRÈME</strong> lahir dari proses fermentasi alami ragi liar (<em>wild levain culture</em>) selama 36 jam. Kami memadukan tepung gandum organik pilihan tanpa bahan pemutih sintetis serta garam laut alami murni.</p>
+          <div class="story-highlight-box">
+            <h5><i class="fa-solid fa-wheat-awn"></i> Karakteristik Utama Roti:</h5>
+            <p>Kulit luar berkaramel renyah (<em>blistering crust</em>) dengan rongga sarang lebah yang lembut, elastis, beraroma asam segar yang ramah untuk pencernaan.</p>
+          </div>
+          <p>Sangat cocok dinikmati langsung bersama mentega Prancis, dicelupkan ke dalam minyak zaitun extra virgin, atau sebagai teman sarapan pagi bernutrisi Anda.</p>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#order-modal" class="btn btn-primary">PESAN ROTI INI</a>
+          <a href="#close" class="btn btn-outline">TUTUP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: CERITA PASTRY MANIS (Pure CSS :target) -->
+  <div class="modal" id="story-pastry" role="dialog" aria-modal="true">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Cerita"></a>
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-sub">SENI LAMINASI TRADISIONAL 27 LAPISAN</span>
+            <h3 class="modal-title">Pastry Manis — Renyah di Luar, Lembut di Dalam</h3>
+          </div>
+          <a href="#close" class="modal-close" aria-label="Tutup">&times;</a>
+        </div>
+        
+        <div class="story-body">
+          <img src="assets/images/sweet-pastry.jpg" alt="Pastry Manis SLN CRÈME" class="story-feature-img">
+          <p>Pastry manis kami dibuat dengan teknik laminasi klasik Prancis (<em>tourage</em>) menggunakan mentega murni <strong>Elle &amp; Vire</strong> berkadar lemak 84%. Pelipatan bertahap menciptakan 27 lapisan mikro mentega dan adonan yang renyah sempurna.</p>
+          <div class="story-highlight-box">
+            <h5><i class="fa-solid fa-cookie-bite"></i> Cita Rasa &amp; Aroma:</h5>
+            <p>Perpaduan harum kayu manis Ceylon organik, brown sugar glaze karamel, dan custard vanila Madagaskar yang meleleh lembut di mulut pada setiap gigitan.</p>
+          </div>
+          <p>Dipanggang segar dua kali sehari (pukul 06.30 WIB dan 13.00 WIB) agar Anda selalu mendapatkan aroma hangat dan kelembutan maksimal saat berkunjung.</p>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#order-modal" class="btn btn-primary">PESAN PASTRY INI</a>
+          <a href="#close" class="btn btn-outline">TUTUP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: CERITA KUE CUSTOM (Pure CSS :target) -->
+  <div class="modal" id="story-cake" role="dialog" aria-modal="true">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Cerita"></a>
+    <div class="modal-dialog modal-dialog-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-sub">DESAIN MINIMALIS ELEGAN &amp; RASA SEIMBANG</span>
+            <h3 class="modal-title">Kue Custom — Mahakarya untuk Hari Spesial Anda</h3>
+          </div>
+          <a href="#close" class="modal-close" aria-label="Tutup">&times;</a>
+        </div>
+        
+        <div class="story-body">
+          <img src="assets/images/custom-cake.jpg" alt="Kue Custom SLN CRÈME" class="story-feature-img">
+          <p>Momen berharga layak dirayakan dengan kue yang istimewa. Di <strong>SLN CRÈME</strong>, setiap kue kustom dirancang secara personal dengan filosofi rasa seimbang, tidak terlalu manis (<em>less-sweet recipe</em>), dan tampilan estetis.</p>
+          <div class="story-highlight-box">
+            <h5><i class="fa-solid fa-cake-candles"></i> Bahan Baku Pilihan:</h5>
+            <p>Sponge chiffon selembut sutra, diplomat cream segar, dipadukan selai buah beri asli yang dimasak secara tradisional (<em>homemade compote</em>) tanpa perasa buatan.</p>
+          </div>
+          <p>Konsultasikan tema warna, kaligrafi cokelat, atau dekorasi bunga segar untuk ulang tahun, pertunangan, dan perayaan keluarga tercinta.</p>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#order-modal" class="btn btn-primary">PESAN KUE CUSTOM</a>
+          <a href="#close" class="btn btn-outline">TUTUP</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5: DETAIL LOKASI BUTIK (Pure CSS :target) -->
+  <div class="modal" id="visit-modal" role="dialog" aria-modal="true">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Modal Lokasi"></a>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-sub">SELAMAT DATANG DI BUTIK KAMI</span>
+            <h3 class="modal-title">Kunjungi Butik SLN CRÈME</h3>
+          </div>
+          <a href="#close" class="modal-close" aria-label="Tutup">&times;</a>
+        </div>
+        
+        <div class="visit-modal-content">
+          <div class="visit-modal-img">
+            <img src="assets/images/collage-interior.jpg" alt="Interior Butik SLN CRÈME" class="modal-preview-img">
+          </div>
+          <div class="visit-modal-details">
+            <h4>Butik SLN CRÈME Senopati</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Jl. Senopati No. 88, Kebayoran Baru, Jakarta Selatan 12190</p>
+            <p><i class="fa-solid fa-clock"></i> <strong>Jam Operasional:</strong> 07.00 — 21.00 WIB (Buka Setiap Hari)</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Telepon:</strong> <a href="tel:+6285179948010">+62 851-7994-8010</a></p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:selinaangraini9@gmail.com">selinaangraini9@gmail.com</a></p>
+            
+            <div class="map-placeholder">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Area Parkir Luas &amp; Suasana Dine-in Nyaman Tersedia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/6285179948010?text=Halo%20SLN%20CR%C3%88ME,%20saya%20ingin%20bertanya%20mengenai%20rute%20lokasi%20toko" target="_blank" rel="noopener" class="btn btn-primary btn-full">
+            <i class="fa-brands fa-whatsapp"></i> HUBUNGI UNTUK PANDUAN RUTE
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX PREVIEW FOTO GALERI (Pure CSS :target) -->
+  <div class="modal modal-lightbox" id="preview-croissant">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/gallery-croissant.jpg" alt="Golden Butter Croissant" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Golden Butter Croissant</h4>
+        <p>Croissant dengan 27 lapisan butter Prancis Elle &amp; Vire, renyah keemasan di luar dan berongga honeycomb sempurna di dalam.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-sourdough">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/gallery-sourdough.jpg" alt="Rustic Country Sourdough" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Rustic Country Sourdough</h4>
+        <p>Fermentasi ragi liar 36 jam menghasilkan kulit renyah berkaramel dan tekstur kenyal dengan cita rasa gurih asam seimbang.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-cookies">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/gallery-cookies.jpg" alt="Sea Salt Dark Choco Cookies" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Valrhona Sea Salt Cookies</h4>
+        <p>Soft baked cookies dengan lelehan cokelat hitam Valrhona 70% dan taburan garam laut Maldon premium.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-pastry">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/gallery-pastry.jpg" alt="Cinnamon Danish Swirl" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Cinnamon Danish Swirl</h4>
+        <p>Pastry berlapis harum kayu manis Ceylon organik, brown sugar glaze karamel, dan aroma mentega gurih yang khas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-choux">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/gallery-choux.jpg" alt="French Vanilla Choux Cream" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>French Vanilla Choux Craquelin</h4>
+        <p>Kue choux renyah dengan craquelin mentega, diisi diplomat cream vanila Madagaskar asli yang lumer di lidah.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-cake">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/gallery-cake.jpg" alt="Raspberry Velvet Custom Cake" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Raspberry Velvet Custom Cake</h4>
+        <p>Kue perayaan spesial dengan sponge lembut, selai buah raspberry segar, dan hiasan whipped cream mewah.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-donuts">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/collage-donuts.jpg" alt="Artisan Cookies dan Ring Donut" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Koleksi Cookies &amp; Ring Donut Artisan</h4>
+        <p>Kreasi camilan manis dengan variasi topping glaze gourmet dan bahan pilihan berkualitas tinggi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-tarts">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/collage-tarts.jpg" alt="Berry Tartlet" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Berry Pastry Tartlet</h4>
+        <p>Tartlet renyah dengan isian diplomat custard lembut dan buah beri segar berlimpah.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-pie">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/collage-pie.jpg" alt="Rustic Powdered Sugar Pie" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Classic Sugar Powdered Pie</h4>
+        <p>Pie klasik dengan taburan gula halus salju dan kulit buttery yang renyah harum.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-lightbox" id="preview-interior">
+    <a href="#close" class="modal-backdrop" aria-label="Tutup Pratinjau"></a>
+    <div class="modal-dialog modal-dialog-img">
+      <a href="#close" class="modal-close-img">&times;</a>
+      <img src="assets/images/collage-interior.jpg" alt="Interior Butik SLN CRÈME" class="lightbox-img">
+      <div class="lightbox-meta">
+        <h4>Suasana Hangat Butik SLN CRÈME</h4>
+        <p>Desain interior bernuansa krem dan kayu hangat dengan etalase pastry yang dipanggang segar setiap pagi.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON (Akses Cepat Pure HTML/CSS) -->
+  <a href="https://wa.me/6285179948010?text=Halo%20SLN%20CR%C3%88ME,%20saya%20ingin%20memesan%20pastry%20segar!" 
+     target="_blank" 
+     rel="noopener" 
+     class="floating-whatsapp" 
+     aria-label="Chat WhatsApp SLN CRÈME">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-tooltip">Chat SLN CRÈME</span>
+  </a>
+
+  <!-- TOMBOL BACK TO TOP (Pure HTML/CSS)-->
+  <a href="#top" class="back-to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+</body>
+</html>

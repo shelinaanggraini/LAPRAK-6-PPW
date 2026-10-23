@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="48" height="32" fill="none">
+  <path d="M30 36 C30 26 30 14 30 6" stroke="#B18A67" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Left grains -->
+  <path d="M30 10 C25 7 21 9 20 12 C22 14 26 14 30 12.5" fill="#B18A67"/>
+  <path d="M30 17 C24 14 19 16 18 20 C21 22 26 21 30 19.5" fill="#B18A67"/>
+  <path d="M30 24 C25 22 21 24 20 27 C22 29 26 28 30 26.5" fill="#B18A67"/>
+  <!-- Right grains -->
+  <path d="M30 10 C35 7 39 9 40 12 C38 14 34 14 30 12.5" fill="#B18A67"/>
+  <path d="M30 17 C36 14 41 16 42 20 C39 22 34 21 30 19.5" fill="#B18A67"/>
+  <path d="M30 24 C35 22 39 24 40 27 C38 29 34 28 30 26.5" fill="#B18A67"/>
+  <!-- Top grain -->
+  <ellipse cx="30" cy="5.5" rx="2.5" ry="4" fill="#B18A67"/>
+</svg>
